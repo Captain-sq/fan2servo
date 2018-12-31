@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>b8caef6a-4bbd-4015-9fe5-65d01f9b51ce</ProjectGuid>
+    <avrdevice>atmega328p</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>StaticLibrary</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>lib$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <Name>ArduinoCore</Name>
+    <ArduinoIdeDir>C:\Program Files (x86)\Arduino</ArduinoIdeDir>
+    <ArduinoProjectType>Core</ArduinoProjectType>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <AssemblyName>ArduinoCore</AssemblyName>
+    <RootNamespace>ArduinoCore</RootNamespace>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.44.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800027370</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>debugWIRE</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800027370</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>debugWIRE</avrtoolinterface>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>..\include\libraries\LiquidCrystal</Value>
+      <Value>..\include\core</Value>
+      <Value>..\include\variants\standard</Value>
+      <Value>..\include\libraries\AnalogMultiButton\src</Value>
+      <Value>..\include\libraries\LiquidMenu\doc\Doxygen\html</Value>
+      <Value>..\include\libraries\LiquidMenu\doc\Doxygen\html\search</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\C_functions_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\D_buttons_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\F_focus_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\H_system_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\J_scrolling_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\src</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\FreqCount</Value>
+      <Value>..\include\libraries\FreqCount\util</Value>
+      <Value>..\include\libraries\CaptureTimer\src</Value>
+      <Value>..\include\libraries\MsTimer2-1.1</Value>
+      <Value>..\include\libraries\FreqPeriodCounter</Value>
+      <Value>..\include\libraries\MD_Menu\docs</Value>
+      <Value>..\include\libraries\MD_Menu\docs\search</Value>
+      <Value>..\include\libraries\MD_Menu\examples\Menu_Test</Value>
+      <Value>..\include\libraries\MD_Menu\src</Value>
+      <Value>..\include\libraries\LiquidCrystal\src</Value>
+      <Value>..\include\libraries\EEPROM\src</Value>
+      <Value>..\include\libraries\uTimerLib\src</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcc.compiler.optimization.OtherFlags>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+  <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -std=gnu11</avrgcc.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>..\include\libraries\LiquidCrystal</Value>
+      <Value>..\include\core</Value>
+      <Value>..\include\variants\standard</Value>
+      <Value>..\include\libraries\AnalogMultiButton\src</Value>
+      <Value>..\include\libraries\LiquidMenu\doc\Doxygen\html</Value>
+      <Value>..\include\libraries\LiquidMenu\doc\Doxygen\html\search</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\C_functions_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\D_buttons_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\F_focus_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\H_system_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\examples\J_scrolling_menu</Value>
+      <Value>..\include\libraries\LiquidMenu\src</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\FreqCount</Value>
+      <Value>..\include\libraries\FreqCount\util</Value>
+      <Value>..\include\libraries\CaptureTimer\src</Value>
+      <Value>..\include\libraries\MsTimer2-1.1</Value>
+      <Value>..\include\libraries\FreqPeriodCounter</Value>
+      <Value>..\include\libraries\MD_Menu\docs</Value>
+      <Value>..\include\libraries\MD_Menu\docs\search</Value>
+      <Value>..\include\libraries\MD_Menu\examples\Menu_Test</Value>
+      <Value>..\include\libraries\MD_Menu\src</Value>
+      <Value>..\include\libraries\LiquidCrystal\src</Value>
+      <Value>..\include\libraries\EEPROM\src</Value>
+      <Value>..\include\libraries\uTimerLib\src</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcccpp.compiler.optimization.OtherFlags>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>..\include\libraries\LiquidCrystal</Value>
+      <Value>..\include\core</Value>
+      <Value>..\include\variants\standard</Value>
+      <Value>..\include\libraries\AnalogMultiButton\src</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\MsTimer2-1.1</Value>
+      <Value>..\include\libraries\FreqPeriodCounter</Value>
+      <Value>..\include\libraries\MD_Menu\src</Value>
+      <Value>..\include\libraries\LiquidCrystal\src</Value>
+      <Value>..\include\libraries\EEPROM\src</Value>
+      <Value>..\include\libraries\uTimerLib\src</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcc.compiler.optimization.OtherFlags>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+  <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -std=gnu11</avrgcc.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>..\include\libraries\LiquidCrystal</Value>
+      <Value>..\include\core</Value>
+      <Value>..\include\variants\standard</Value>
+      <Value>..\include\libraries\AnalogMultiButton\src</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\MsTimer2-1.1</Value>
+      <Value>..\include\libraries\FreqPeriodCounter</Value>
+      <Value>..\include\libraries\MD_Menu\docs</Value>
+      <Value>..\include\libraries\MD_Menu\docs\search</Value>
+      <Value>..\include\libraries\MD_Menu\examples\Menu_Test</Value>
+      <Value>..\include\libraries\MD_Menu\src</Value>
+      <Value>..\include\libraries\LiquidCrystal\src</Value>
+      <Value>..\include\libraries\EEPROM\src</Value>
+      <Value>..\include\libraries\uTimerLib\src</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcccpp.compiler.optimization.OtherFlags>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="include\core\Arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\binary.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\HardwareSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\HardwareSerial_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\IPAddress.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\new.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\PluggableUSB.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Printable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Server.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\Udp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USBAPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USBCore.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\USBDesc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WCharacter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\wiring_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\core\WString.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\AnalogMultiButton\src\AnalogMultiButton.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\EEPROM\src\EEPROM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\FreqPeriodCounter\FreqPeriodCounter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\LiquidCrystal\src\LiquidCrystal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\MD_Menu\examples\Menu_Test\Menu_Test.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\MD_Menu\src\MD_Menu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\MD_Menu\src\MD_Menu_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\avr\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\nrf52\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\samd\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\sam\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\Servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\stm32f4\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\uTimerLib\src\uTimerLib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\variants\standard\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\abi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\CDC.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\HardwareSerial0.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\HardwareSerial1.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\HardwareSerial2.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\HardwareSerial3.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\hooks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\IPAddress.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\new.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\PluggableUSB.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\PreprocessingAssembly\wiring_pulse.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Print.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Stream.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\Tone.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\USBCore.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\WInterrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_digital.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_pulse.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\wiring_shift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\WMath.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\core\WString.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\AnalogMultiButton\src\AnalogMultiButton.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\FreqPeriodCounter\FreqPeriodCounter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\LiquidCrystal\src\LiquidCrystal.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\MD_Menu\examples\Menu_Test\Menu_Test_Disp.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\MD_Menu\examples\Menu_Test\Menu_Test_Nav.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\MD_Menu\src\MD_Menu.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\avr\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\nrf52\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\samd\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\sam\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\stm32f4\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\uTimerLib\src\uTimerLib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include\" />
+    <Folder Include="include\core\" />
+    <Folder Include="include\libraries\" />
+    <Folder Include="include\libraries\AnalogMultiButton\" />
+    <Folder Include="include\libraries\AnalogMultiButton\src\" />
+    <Folder Include="include\libraries\EEPROM\" />
+    <Folder Include="include\libraries\EEPROM\src\" />
+    <Folder Include="include\libraries\FreqPeriodCounter\" />
+    <Folder Include="include\libraries\LiquidCrystal\" />
+    <Folder Include="include\libraries\LiquidCrystal\src\" />
+    <Folder Include="include\libraries\MD_Menu\" />
+    <Folder Include="include\libraries\MD_Menu\docs\" />
+    <Folder Include="include\libraries\MD_Menu\docs\search\" />
+    <Folder Include="include\libraries\MD_Menu\examples\" />
+    <Folder Include="include\libraries\MD_Menu\examples\Menu_Test\" />
+    <Folder Include="include\libraries\MD_Menu\src\" />
+    <Folder Include="include\libraries\Servo\" />
+    <Folder Include="include\libraries\Servo\src\" />
+    <Folder Include="include\libraries\Servo\src\avr\" />
+    <Folder Include="include\libraries\Servo\src\nrf52\" />
+    <Folder Include="include\libraries\Servo\src\samd\" />
+    <Folder Include="include\libraries\Servo\src\sam\" />
+    <Folder Include="include\libraries\Servo\src\stm32f4\" />
+    <Folder Include="include\libraries\uTimerLib\" />
+    <Folder Include="include\libraries\uTimerLib\src\" />
+    <Folder Include="include\variants\" />
+    <Folder Include="include\variants\standard\" />
+    <Folder Include="src\" />
+    <Folder Include="src\core\" />
+    <Folder Include="src\core\PreprocessingAssembly\" />
+    <Folder Include="src\libraries\" />
+    <Folder Include="src\libraries\AnalogMultiButton\" />
+    <Folder Include="src\libraries\AnalogMultiButton\src\" />
+    <Folder Include="src\libraries\FreqPeriodCounter\" />
+    <Folder Include="src\libraries\LiquidCrystal\" />
+    <Folder Include="src\libraries\LiquidCrystal\src\" />
+    <Folder Include="src\libraries\MD_Menu\" />
+    <Folder Include="src\libraries\MD_Menu\docs\" />
+    <Folder Include="src\libraries\MD_Menu\docs\search\" />
+    <Folder Include="src\libraries\MD_Menu\examples\" />
+    <Folder Include="src\libraries\MD_Menu\examples\Menu_Test\" />
+    <Folder Include="src\libraries\MD_Menu\src\" />
+    <Folder Include="src\libraries\Servo\" />
+    <Folder Include="src\libraries\Servo\src\" />
+    <Folder Include="src\libraries\Servo\src\avr\" />
+    <Folder Include="src\libraries\Servo\src\nrf52\" />
+    <Folder Include="src\libraries\Servo\src\samd\" />
+    <Folder Include="src\libraries\Servo\src\sam\" />
+    <Folder Include="src\libraries\Servo\src\stm32f4\" />
+    <Folder Include="src\libraries\uTimerLib\" />
+    <Folder Include="src\libraries\uTimerLib\src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\libraries\MD_Menu\docs\annotated.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\classes.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\class_m_d___menu-members.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\class_m_d___menu.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\dir_68267d1309a1af8e8297ef4c3efbcdba.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\files.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\functions.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\functions_enum.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\functions_eval.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\functions_func.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\functions_type.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\functions_vars.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\globals.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\globals_defs.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\globals_vars.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\graph_legend.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\index.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\pages.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\page_copyright.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\page_menu.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\page_revision_history.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\page_software.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\page_using_library.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_10.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_11.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_12.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_3.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_4.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_5.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_6.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_7.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_8.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_9.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_a.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_b.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_c.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_d.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_e.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\all_f.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\classes_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\classes_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_3.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_4.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_5.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_6.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\defines_7.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enums_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enums_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enums_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enumvalues_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enumvalues_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enumvalues_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\enumvalues_3.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\files_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_3.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_4.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_5.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\functions_6.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\nomatches.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\pages_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\pages_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\pages_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\pages_3.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\typedefs_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\typedefs_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_0.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_1.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_2.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_3.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_4.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_5.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_6.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_7.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_8.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_9.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_a.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_b.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\search\variables_c.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1mnu_header__t-members.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1mnu_header__t.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1mnu_input__t-members.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1mnu_input__t.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1mnu_item__t-members.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1mnu_item__t.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1value__t-members.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\struct_m_d___menu_1_1value__t.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\_m_d___menu_8cpp.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\_m_d___menu_8h.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="include\libraries\MD_Menu\docs\_m_d___menu__lib_8h.html">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\libraries\MD_Menu\docs\doxygen.css">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\libraries\MD_Menu\docs\navtree.css">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\libraries\MD_Menu\docs\search\search.css">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\libraries\MD_Menu\docs\tabs.css">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
